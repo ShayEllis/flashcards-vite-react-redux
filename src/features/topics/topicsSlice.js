@@ -6,9 +6,8 @@ export const topicsSlice = createSlice({
     name: 'topics',
     initialState: initialState,
     reducers: {
-        addTopic: (state, { payload }) => {
-            state.topics[payload.id] = {...payload, quizIds: []}
-        }
+        addTopic: (state, { payload }) => state.topics[payload.id] = {...payload, quizIds: []},
+        addTopicToQuizIds: (state, { payload }) => state.topics[payload.topicId].quizIds.push(payload.quizId) 
     }
 })
 
