@@ -22,16 +22,17 @@ export default function NewQuizForm() {
 
     const cardIds = [];
 
-    const quizToAdd = {
-      id: uuidv4(),
-      name: '', /////************ working on this */
-      topicId: '',
-      cardIds: cardIds
-    }
-
     // create the new cards here and add each card's id to cardIds
     // create the new quiz here
 
+    const quizToAdd = {
+      id: uuidv4(),
+      name: e.target[0].value,
+      topicId: topicId,
+      cardIds: cardIds
+    }
+
+    dispatch(createQuiz(quizToAdd))
     navigate(ROUTES.quizzesRoute()); // was using useHistory
   };
 

@@ -21,7 +21,7 @@ export default function NewTopicForm() {
     const topicToAdd = {
       id: uuidv4(),
       name: e.target[0].value,
-      icon: e.target[1].value
+      icon: icon
     }
 
     // dispatch your add topic action here
